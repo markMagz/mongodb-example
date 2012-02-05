@@ -10,9 +10,9 @@
   <packaging>pom</packaging>
 
   <!-- Project Information -->
-  <name>Mongo Sample</name>
+  <name>Mongo Samples :: Parent POM</name>
   <description>
-    Mongo Sample Application
+    Mongo Sample Applications Root POM
   </description>
 
   <prerequisites>
@@ -33,56 +33,20 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <!-- <dependency>
-        <groupId></groupId>
-        <artifactId></artifactId>
-        <version></version>
-      </dependency>-->
-    </dependencies>
-  </dependencyManagement>
-
-  <build>
-    <pluginManagement>
-      <plugins>
-        <!--<plugin>
-          <groupId></groupId>
-          <artifactId></artifactId>
-          <version></version>
-        </plugin>-->
-      </plugins>
-    </pluginManagement>
-
-    <plugins>
-      <!--<plugin>
-        <groupId></groupId>
-        <artifactId></artifactId>
-        OTHER TAGS
-      </plugin>-->
-    </plugins>
-  </build>
-
-
-  <!-- BUILD PROFILES -->
-  <profiles>
-    <!-- profile for development environment (local instance) -->
-    <profile>
-      <id>dev</id>
-      <activation>
-        <property>
-          <name>dev</name>
-        </property>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <properties>
-        <env>dev</env>
-      </properties>
-    </profile>
-  </profiles>
-
   <!-- REMOTE REPOSITORIES -->
   <repositories>
+    <repository>
+      <id>repo1.maven.org</id>
+      <name>Public Maven2 Repo</name>
+      <url>http://repo1.maven.org/maven2</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+
     <!--<repository>
       <id></id>
       <name></name>
@@ -97,6 +61,18 @@
   </repositories>
 
   <pluginRepositories>
+    <pluginRepository>
+      <id>repo1.maven.org</id>
+      <name>Public Maven2 Repo</name>
+      <url>http://repo1.maven.org/maven2</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+
     <!--<pluginRepository>
       <id></id>
       <name></name>

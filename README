@@ -2,4 +2,5 @@ Mongo Db Sample Application
 
 modules:
 
-
+mongo-example-driver
+mongo-example-morphia
