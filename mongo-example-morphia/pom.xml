@@ -4,42 +4,46 @@
 
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>com.mongo.sample</groupId>
+    <artifactId>mongo-sample-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
   <groupId>com.mongo.sample</groupId>
-  <artifactId>mongo-sample-parent</artifactId>
+  <artifactId>mongo-example-morphia</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <!-- Project Information -->
-  <name>Mongo Samples :: Parent POM</name>
+  <name>Mongo Sample Morphia</name>
   <description>
-    Mongo Sample Applications Root POM
+    Mongo Example Using Morphia
   </description>
 
   <prerequisites>
     <maven>3.0.0</maven>
   </prerequisites>
 
-  <scm>
-    <connection>scm:git:ssh://git@github.com:markMagz/mongodb-example.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:markMagz/mongodb-example.git</developerConnection>
-    <url>https://markMagz@github.com/markMagz/mongodb-example.git</url>
-  </scm>
-
-  <modules>
-      <module>mongo-example-driver</module>
-      <module>mongo-example-morphia</module>
-  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <morphia.version>0.99</morphia.version>
   </properties>
 
-  <!-- REMOTE REPOSITORIES -->
+  <dependencies>
+    <dependency>
+      <groupId>com.google.code.morphia</groupId>
+      <artifactId>morphia</artifactId>
+      <version>${morphia.version}</version>
+    </dependency>
+  </dependencies>
+
   <repositories>
     <repository>
-      <id>repo1.maven.org</id>
-      <name>Public Maven2 Repo</name>
-      <url>http://repo1.maven.org/maven2</url>
+      <id>morphia-maven-repository</id>
+      <name>Morphia Maven Repository</name>
+      <url>http://morphia.googlecode.com/svn/mavenrepo/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -48,20 +52,6 @@
       </snapshots>
     </repository>
   </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>repo1.maven.org</id>
-      <name>Public Maven2 Repo</name>
-      <url>http://repo1.maven.org/maven2</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
 
   <!-- PROJECT INFORMATION -->
   <inceptionYear>2012</inceptionYear>

@@ -1,5 +1,7 @@
 Mongo Db Sample Application
 
+Description: Sample mongo db usage using morphia and directly using it's client driver
+
 modules:
 
 mongo-example-driver
